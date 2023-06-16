@@ -19,11 +19,11 @@ const Tasks = () => {
         const parent = e.active.data.current?.parent ?? 'todo';
         if (container && container !== parent) {
           if (container === 'todo') {
-            setTodoItems([...todoItems, data]);
+            setTodoItems([data, ...todoItems]);
           } else if (container === 'done') {
-            setDoneItems([...doneItems, data]);
+            setDoneItems([data, ...doneItems]);
           } else {
-            setInProgressItems([...inProgressItems, data]);
+            setInProgressItems([data, ...inProgressItems]);
           }
           if (parent === 'todo') {
             setTodoItems([...todoItems.slice(0, index), ...todoItems.slice(index + 1)]);

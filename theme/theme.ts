@@ -25,4 +25,9 @@ const colors = {
   }
 };
 
-export const theme = extendTheme({ colors });
+const fonts = {
+  heading: `'Inter', 'Open Sans', sans-serif`,
+  body: `'Inter', 'Raleway', sans-serif`
+};
+
+export const theme = extendTheme({ colors, fonts });
